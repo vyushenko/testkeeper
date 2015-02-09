@@ -1,7 +1,7 @@
 # testkeeper
 
-### Starting server
+#### Starting the server
 `npm start`
 
-### Accessing
+#### Accessing an app
 Navigate to `http://localhost:3000`
