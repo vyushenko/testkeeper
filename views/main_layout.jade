@@ -1,0 +1,57 @@
+extends base_layout
+
+mixin menu_item(url, name, icon, id)
+    li(class=selectedMenu == id ? 'active':'',class=typeof block === 'undefined'?'':'dropdown-toggle')
+      if selectedMenu == id
+        div.pointer
+          div.arrow
+          div.arrow_border
+      a(href=url)
+        i(class=icon)
+        span #{name}
+        if block
+          i.icon-chevron-down
+      block
+
+block navbar
+  //- navbar
+  header.navbar.navbar-inverse(role='banner')
+    div.navbar-header
+      a.navbar-brand(href='/')
+        img(src='/img/logo.png' alt='logo')
+    ul.nav.navbar-nav.pull-right.hidden-xs
+      li.dropdown
+        a.dropdown-toggle.hidden-xs.hidden-sm(data-toggle='dropdown') Your account&nbsp;&nbsp;
+          b.caret
+        ul.dropdown-menu
+          li: a(href='/account/personal-info') Personal info
+          li: a(href='/logout') Log out
+
+block sidebar
+  //- sidebar
+  div#sidebar-nav
+    ul#dashboard-menu
+      +menu_item('/', 'Dashboard', 'icon-home', 0)
+      +menu_item('/test_runs/list', 'Test Runs', 'icon-signal', 1)
+      +menu_item('/test_suites/list', 'Test Suites', 'icon-th-large', 2)
+      +menu_item('/test_cases/list', 'Test Cases', 'icon-list-alt', 3)
+      +menu_item('#', 'Users', 'icon-group', 4)
+        ul.submenu
+          li: a(href='admin/user_list') User list
+          li: a(href='admin/new-user') Add new user
+
+block main_container
+  //- main container
+  div.content
+    block main_content
+                      
+block content
+  block navbar
+  
+  block sidebar
+          
+  block main_container  
+  
+block content_scripts        
+  script(src='/js/jquery-ui-1.10.2.custom.min.js')
+  script(src='/js/theme.js')

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Keeper - Test Cases</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- bootstrap -->
+    <link href="../css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- libraries -->
+    <link href="../css/lib/jquery.dataTables.css" type="text/css" rel="stylesheet" />
+    <link href="../css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="../css/compiled/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/compiled/elements.css" />
+    <link rel="stylesheet" type="text/css" href="../css/compiled/icons.css" />
+
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="../css/compiled/index.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../css/compiled/tables.css" type="text/css" media="screen" />
+
+    <!-- open sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+
+    <!-- lato font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- navbar -->
+    <header class="navbar navbar-inverse" role="banner">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="logo" />
+            </a>
+        </div>
+        <ul class="nav navbar-nav pull-right hidden-xs">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
+                    Your account
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/account/personal-info.html">Personal info</a></li>
+                    <li><a href="/logout.html">Log out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- end navbar -->
+
+    <!-- sidebar -->
+    <div id="sidebar-nav">
+        <ul id="dashboard-menu">
+            <li>
+                <a href="index.html">
+                    <i class="icon-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>            
+            <li>
+                <a href="/test_runs/list.html">
+                    <i class="icon-signal"></i>
+                    <span>Test Runs</span>
+                </a>
+            </li>
+            <li>
+                <a href="/test_suites/list.html">
+                    <i class="icon-th-large"></i>
+                    <span>Test Suites</span>
+                </a>
+            </li>
+            <li class="active">
+              <div class="pointer">
+                  <div class="arrow"></div>
+                  <div class="arrow_border"></div>
+              </div>
+                <a href="/test_cases/list.html">
+                    <i class="icon-list-alt"></i>
+                    <span>Test Cases</span>
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-group"></i>
+                    <span>Users</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="admin/user_list.html">User list</a></li>
+                    <li><a href="admin/new-user.html">New user form</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- end sidebar -->
+
+
+	<!-- main container -->
+    <div class="content">
+        <div id="pad-wrapper">
+            <div class="table-wrapper products-table">
+            <div class="row head">
+                <div class="col-md-12">
+                    <h4>Test cases</h4>
+                </div>
+            </div>
+
+            <div class="row filter-block">
+                <div class="pull-right">
+                    <a href="/test_cases/add_new.html" class="btn-flat success new-product">+ Add test case</a>
+                </div>
+            </div>
+
+                
+            <div class="row">
+                <div class="col-md-12">
+
+                    <table id="example" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th tabindex="0" rowspan="1" colspan="1">ID
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">Name
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">User
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">Created
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">Last Edited
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">Action
+                                </th>
+                            </tr>
+                        </thead>
+                        
+                        <tfoot>
+                            <tr>
+                                <th rowspan="1" colspan="1">ID</th>
+                                <th rowspan="1" colspan="1">Name</th>
+                                <th rowspan="1" colspan="1">User</th>
+                                <th rowspan="1" colspan="1">Created</th>
+                                <th rowspan="1" colspan="1">Last Edited</th>
+                                <th rowspan="1" colspan="1">Actions</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>Trident</td>
+                                <td>Internet
+                                     Explorer 4.0</td>
+                                <td>Win 95+</td>
+                                <td class="center"> 4</td>
+                                <td class="center">X</td>
+                                <td>
+                                  <ul class="actions">
+                                      <li><a href="#">Edit</a></li>
+                                      <li class="last"><a href="#">Delete</a></li>
+                                  </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+	  <!-- scripts -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.dataTables.js"></script>
+    <script src="../js/jquery.dataTables.columnFilter.js"></script>
+
+    <script src="../js/theme.js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').dataTable({
+                "sPaginationType": "full_numbers"
+            }).columnFilter();
+        });
+    </script>
+</body>
+</html>

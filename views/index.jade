@@ -1,0 +1,23 @@
+extends main_layout
+
+block content_styles
+  link(rel='stylesheet', href='/css/compiled/index.css')
+  
+block main_content
+  div#main-stats
+    div.row.stats-row
+      div.col-md-4.col-sm-4.stat
+        div.data
+          span.number 2457
+          span Updates
+        span.date Today
+      div.col-md-4.col-sm-4.stat
+        div.data
+          span.number 3240
+          span Test cases
+        span.date February 2013
+      div.col-md-4.col-sm-4.stat
+        div.data
+          span.number 322
+          span Open test runs
+        span.date This week

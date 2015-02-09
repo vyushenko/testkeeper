@@ -1,0 +1,41 @@
+extends ../main_layout
+
+block content_styles
+  link(rel='stylesheet', href='/css/compiled/new-user.css')
+  
+block main_content
+  div.new-user#pad-wrapper
+    .row.header
+      .col-md-12
+        h4 Test Cases > Add New
+    .row.form-wrapper
+      .col-md-9.with-sidebar
+        form.form-horizontal(role='form',method='post')
+          input#id(type='hidden',name='id')
+          .form-group
+            label.col-md-2.control-label(for='name') Test Name
+            .col-md-8
+              input.form-control#name(type='text',placeholder='Test Name',name='name')
+          .form-group
+            label.col-md-2.control-label(for='steps') Steps
+            .col-md-8
+              textarea.form-control#steps(rows='5',placeholder='Steps',name='steps')
+          .form-group
+            label.col-md-2.control-label(for='expected') Expected Result
+            .col-md-8
+              textarea.form-control#expected(rows='5',placeholder='Expected Result',name='expected')
+          .form-group
+            .col-md-offset-6.col-md-5
+              button.btn.btn-default(type='submit') Create Test Case
+              button.btn.btn-default(type='submit') Cancel
+      .col-md-3.form-sidebar
+        .alert.alert-info
+          i.icon-lightbulb.pull-left
+          span Display a sidebar note over here
+        h6 Sidebar text for instructions
+        p Add multiple users at once
+        p Choose one of the following file types:
+        ul
+          li: a(href='#') Upload a vCard file
+
+              

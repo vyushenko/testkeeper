@@ -1,0 +1,36 @@
+extends ../main_layout
+
+block content_styles
+  link(rel='stylesheet', href='/css/compiled/tables.css')
+  
+block main_content
+  div#pad-wrapper
+    .table-wrapper.products-table.section
+      .row.head
+        .col-md-12
+          h4 Test Cases
+      .row.filter-block
+        .pull-right
+          a.btn-flat.success.new-product(href='add_new') + Add New Test Case
+      .row
+        table.table.table-hover
+          thead
+            tr
+              th.col-md-3
+                span ID
+              th.col-md-3
+                span.line
+                span Name
+              th.col-md-3
+                span.line
+                span Actions
+          tbody
+            each testCase, i in testCases
+              tr(class=i == 0 ? 'first' : '')
+                td #{testCase.id}
+                td #{testCase.name}
+                td
+                  ul.actions
+                    li: a(href='edit?tc=' + testCase.id) Edit
+                    li.last: a(href='delete?tc=' + testCase.id) Delete
+              

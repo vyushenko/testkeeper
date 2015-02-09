@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+var debug = require('debug')('testkeeper');
+var app = require('../app');
+
+app.set('port', process.env.PORT || 3000);
+
+app.set('db_host', 'localhost');
+app.set('db_port', 3306);
+app.set('db_user', 'test_keeper_dev');
+app.set('db_password', 'W8er$bnQy@Q');
+
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
