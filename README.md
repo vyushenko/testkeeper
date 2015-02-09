@@ -1,5 +1,8 @@
 # testkeeper
 
+#### Installing dependencies
+`npm install`
+
 #### Starting the server
 `npm start`
 
